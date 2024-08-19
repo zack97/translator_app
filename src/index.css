@@ -75,9 +75,9 @@ li,
 }
 
 .controls .row .icons i {
-  width: 50px;
+  width: 40px;
   color: #adadad;
-  font-size: 14px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: transform 0.2s ease;
   justify-content: center;
@@ -152,6 +152,7 @@ li,
   background: #06283d;
 }
 
+/* Media Query for devices below 660px */
 @media (max-width: 660px) {
   .container {
     padding: 20px;
@@ -171,7 +172,13 @@ li,
   }
 
   .controls .row .icons {
-    display: none;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .controls .row .icons i {
+    font-size: 1rem; /* Reduced size for mobile */
+    width: 30px; /* Adjusted icon width */
   }
 
   .container button {
@@ -185,5 +192,35 @@ li,
 
   .controls .exchange {
     font-size: 14px;
+  }
+}
+
+/* Additional Media Query for devices below 587px */
+@media (max-width: 587px) {
+  .container {
+    padding: 15px;
+  }
+
+  .text-input textarea {
+    height: 150px;
+    font-size: 16px;
+  }
+
+  .controls .row select {
+    font-size: 10px;
+  }
+
+  .controls .row .icons i {
+    font-size: 0.9rem;
+    width: 20px;
+  }
+
+  .controls .exchange {
+    font-size: 12px;
+  }
+
+  .container button {
+    padding: 12px;
+    font-size: 15px;
   }
 }
